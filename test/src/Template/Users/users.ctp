@@ -27,7 +27,7 @@
               "action"=> "add" ] ] );
 
             //コントロールを配置
-            echo $this->Form->control("username",[
+            echo $this->Form->control("user_name",[
               "label" => 'ユーザ名',
             ]);
 

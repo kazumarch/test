@@ -18,13 +18,6 @@ use Cake\Auth\DefaultPasswordHasher;
  */
 class UsersController extends AppController
 {
-
-  public function beforeFilter(Event $event)
-  {
-    parent::beforeFilter($event);
-    $this->Auth->allow(['index','login','add','login_start']);
-  }
-
     /**
      * Index method
      *
@@ -53,7 +46,7 @@ class UsersController extends AppController
       //
       // $match = password_verify($users->data['password'],$this->request->data['password']);
 
-      // 
+
       // if($users){
       //   debug('Password is Correct');
       // }else{
@@ -106,9 +99,9 @@ class UsersController extends AppController
                 $this->Flash->success(__('The user has been saved.'));
                 return $this->redirect(['action' => 'index']);
             }
-//             else{
-//     $this->log(print_r($user->errors(),true),LOG_DEBUG);
-// }
+            else{
+    $this->log(print_r($user->errors(),true),LOG_DEBUG);
+}
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));

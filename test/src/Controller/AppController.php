@@ -27,6 +27,12 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
+  public function beforeFilter(Event $event)
+  {
+    parent::beforeFilter($event);
+    $this->Auth->allow(['index','login','add','login_start']);
+  }
+  
     /**
      * Initialization hook method.
      *

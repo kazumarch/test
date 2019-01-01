@@ -35,15 +35,15 @@ class UsersTable extends Table
         parent::initialize($config);
 
         $this->setTable('users');
-        $this->setDisplayField('id_num');
-        $this->setPrimaryKey('id_num');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->belongsTo('users', [
             'foreignKey' => 'user_id'
         ]);
-        $this->hasMany('task', [
-            'foreignKey' => 'user_id'
-        ]);
+        // $this->hasMany('task', [
+        //     'foreignKey' => 'user_id'
+        // ]);
         $this->hasMany('users', [
             'foreignKey' => 'user_id'
         ]);
@@ -59,12 +59,12 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id_num')
-            ->allowEmpty('id_num', 'create');
+            ->scalar('user_id')
+            ->allowEmpty('user_id', 'create');
 
         $validator
-            ->scalar('username')
-            ->allowEmpty('username');
+            ->scalar('user_name')
+            ->allowEmpty('user_name');
 
         $validator
             ->email('email')
@@ -94,7 +94,7 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['username']));
+        $rules->add($rules->isUnique(['user_name']));
         $rules->add($rules->isUnique(['email']));
         //$rules->add($rules->existsIn(['user_id'], 'Users'));
 

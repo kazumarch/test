@@ -60,6 +60,10 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
+    $routes->connect('/tasks/edit/:id', ['controller' => 'Tasks', 'action' => 'edit'])
+        ->setPatterns(['id' => "([0-9]{1,})"])
+        ->setPass(["id"]);
+
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */

@@ -8,16 +8,18 @@
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
+    <?= $this->Html->css('menu.css') ?>
   <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet"> -->
 </head>
 
 <body class="home">
 
-  <div class="login">
+  <div class="top">
 		<div class="heading">
-			<h1>Login</h1>
-
-      <div class="form-wrap">
+			<h1 class="topmenu">ログイン</h1>
+    </div>
+  </div>
+    <div class="form-wrap">
 
         <p>
           <?php
@@ -38,7 +40,7 @@
             "label" => 'パスワード',
           ]);
 
-          echo $this->Form->submit('Login');
+          echo $this->Form->submit('ログイン');
 
           //フォームの終了
           echo $this->Form->end();
@@ -47,9 +49,9 @@
           ?>
         </p>
 
-      </div>
-		</div>
-	</div>
+    </div>
+
+
 
 </body>
 </html>

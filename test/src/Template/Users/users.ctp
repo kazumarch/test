@@ -8,58 +8,60 @@
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
+    <?= $this->Html->css('menu.css') ?>
   <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet"> -->
 </head>
 
 <body class="home">
 
-  <div class="create">
+  <div class="top">
 		<div class="heading">
-			<h1>新規登録</h1>
-        <div class="form-wrap">
+			<h1 class="topmenu">新規登録</h1>
+    </div>
+  </div>
 
-          <p>
-            <?php
-            //フォームの作成
-            echo $this->Form->create(
-              "null", [ "type" => "post",
-              "url" => [ "controller" => "Users",
-              "action"=> "add" ] ] );
+  <div class="form-wrap">
 
-            //コントロールを配置
-            echo $this->Form->control("user_name",[
-              "label" => 'ユーザ名',
-            ]);
+    <p>
+      <?php
+      //フォームの作成
+      echo $this->Form->create(
+        "null", [ "type" => "post",
+        "url" => [ "controller" => "Users",
+        "action"=> "add" ] ] );
 
-            echo $this->Form->control("email",[
-              "type" => "text",
-              "label" => 'メール',
-            ]);
+      //コントロールを配置
+      echo $this->Form->control("user_name",[
+        "label" => 'ユーザ名',
+      ]);
 
-            echo $this->Form->control("user_id",[
-              "type" => "text",
-              "label" => 'ユーザID',
-            ]);
+      echo $this->Form->control("email",[
+        "type" => "text",
+        "label" => 'メール',
+      ]);
 
-            echo $this->Form->control("password",[
-              "type" => "password",
-              "label" => 'パスワード',
-            ]);
+      echo $this->Form->control("user_id",[
+        "type" => "text",
+        "label" => 'ユーザID',
+      ]);
 
-            echo $this->Form->submit('Create');
+      echo $this->Form->control("password",[
+        "type" => "password",
+        "label" => 'パスワード',
+      ]);
 
-            //フォームの終了
-            echo $this->Form->end();
+      echo $this->Form->submit('登録');
+
+      //フォームの終了
+      echo $this->Form->end();
 
 
-            ?>
-          </p>
+      ?>
+    </p>
 
-        </div>
+  </div>
 
-		</div>
 
-	</div>
 
 </body>
 </html>

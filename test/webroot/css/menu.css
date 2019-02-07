@@ -1,0 +1,36 @@
+.top {
+  	background-image: url("../img/back.jpg");
+}
+
+.heading{
+	width: 50%;
+	display: inline-block;
+}
+
+.topmenu {
+	color:white!important;
+	font-size: 30px;
+	margin-left: 30px;
+	padding: 20px 0;
+	width: 50%;
+}
+
+
+.form-wrap{
+	text-align:right;
+	float:right;
+	margin-top: 50px
+}
+
+ul{
+	display: inline-block;
+}
+
+.newcustomer{
+	margin-right: 30px;
+}
+
+.input{
+	margin: 0 auto;
+	width: 60%;
+}

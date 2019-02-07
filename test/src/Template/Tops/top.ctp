@@ -12,9 +12,9 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet"> -->
 </head>
 
-<body class="home">
 
-  	<div class="top">
+<body class="substance">
+	<header class="head">
 		<div class="heading">
 			<h1 class="topmenu">メインメニュー</h1>
 		</div>
@@ -54,41 +54,11 @@
 				</li>
 			</ul>
 		</div>
-	</div>
-
-<!-- 	<div class="form-wrap">
-
-		
-	      	<?php
-	          //フォームの作成
-	          echo $this->Form->create(
-	            "null", [ "type" => "post",
-	            "class" => "login",
-	            "url" => [ "controller" => "Users",
-	            "action"=> "loginStart" ] ] );
-
-	          echo $this->Form->submit('ログイン');
-
-	          //フォームの終了
-	          echo $this->Form->end();
+	</header>
 
 
-	          echo $this->Form->create(
-	            "null", [ "type" => "post",
-	            "class" => "newcustomer",
-	            "url" => [ "controller" => "Users",
-	            "action"=> "index" ] ] );
 
-	          echo $this->Form->submit('新規登録');
-
-	          //フォームの終了
-	          echo $this->Form->end();
-
-	          ?>
-    	
-	</div> -->
 		
 	
-
 </body>
 </html>
